@@ -17,7 +17,7 @@ def main():
     # run variations of the method to compare initializations and T laws
     for init_method in ['greedy', 'random']:
         for temp_type in ['sqrt', 'log', 'exp']:
-            simulation = Simulated_Annealing(cost_matrix=cost_matrix, temp_type=temp_type, init_method=init_method, max_iter=1000)
+            simulation = Simulated_Annealing(cost_matrix=cost_matrix, temp_type=temp_type, init_method=init_method, max_iter=100)
             path, path_cost, cost_list = simulation.run()
     
             plt.plot(cost_list, label=f"({init_method}, {temp_type})")

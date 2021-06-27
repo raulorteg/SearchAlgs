@@ -13,7 +13,7 @@ def main():
     fname = "cost.csv"
     cost_matrix = pd.read_csv(fname, dtype='int').to_numpy()
 
-    simulation = Simulated_Annealing(cost_matrix=cost_matrix, temp_type="sqrt", init_method="random", max_iter=1000)
+    simulation = Simulated_Annealing(cost_matrix=cost_matrix, temp_type="sqrt", init_method="random", max_iter=100)
     path, path_cost, cost_list = simulation.run()
     
     # print results in command line

@@ -14,8 +14,8 @@ def main():
     circle_map = Circle_Map(num_cities=20)
     cost_matrix = circle_map.get_distances()
 
-    simulation = Simulated_Annealing(cost_matrix=cost_matrix, temp_type='log', init_method='random', max_iter=500)
-    path, path_cost, cost_list = simulation.run(map=circle_map, animate=True)
+    simulation = Simulated_Annealing(cost_matrix=cost_matrix, temp_type='log', init_method='random', max_iter=200)
+    path, path_cost, cost_list = simulation.run(map=circle_map, animate=False)
 
     # print results in command line
     print(f"Path solution: {path}")
